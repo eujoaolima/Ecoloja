@@ -1,0 +1,393 @@
+/* Definição das fontes: */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap');
+
+/* Definição das cores: */
+:root {
+    --color-lightGreen: rgb(121, 158, 42);
+    --color-lightGreen2:  rgba(196, 243, 93, 0.418);
+    --color-darkGreen: rgb(0, 130, 46);
+    --color-gray: rgb(177, 177, 177);
+    --color-gray2: #434343;
+    --color-gray3: rgb(170, 170, 170);
+    --color-darkGray: #1d1919;
+    --color-lightGray: lightgray;
+    --color-lightGray2: #e4ece5bb;
+    --color-white: #ffffff;
+}
+
+/* Definição das configurações gerais da página: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-white);
+    font-family: 'Work Sans', sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Estilização da Scrollbar: */
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-lightGreen);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-darkGreen);
+}
+
+/* Header */
+
+.header {
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--color-white);
+}
+
+.logo img {
+    height: 80px;
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+    transition: transform .3s ease;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 14vh;
+}
+
+nav a {
+    cursor: pointer;
+    color: var(--color-gray);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    color: var(--color-lightGreen);
+    transition: .3s;
+}
+
+    /* Efeito Navbar */ 
+
+    nav a::after {
+        content: "";
+        display: block;
+        border-bottom: 2px solid var(--color-darkGreen);
+        margin-top: 5px;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+        transform: scaleX(1);
+    }
+
+/* Banner */
+
+.banner img {
+    display: block;
+    width: 100%;
+}
+
+/* Descontos da Semana - Título */
+
+#title {
+    color: var(--color-darkGray);
+    font-size: 32px;
+    padding: 25px;
+}
+
+#title::after {
+    width: 15%;
+    content: "";
+    display: block;
+    border-bottom: 3px solid var(--color-darkGreen);
+    border-radius: 10px;
+    margin-top: 5px;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+/* Cards */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: var(--color-gray2);
+    background-color: var(--color-lightGreen2);
+    padding: 32px;
+}
+
+.icon {
+    width: 200px;
+    height: 470px;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+section.card img {
+    width: 70%;
+    cursor: pointer;
+}
+
+section.card img:hover {
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 20px;
+    background-color: var(--color-lightGray2);
+}
+
+.cards section.card:first-child {
+    margin-left: 0;
+}
+
+.cards section.card h1 {
+    margin: 14px 0;
+}
+
+.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 16px 0;
+}
+
+.cards section.card.item button {
+    background: var(--color-lightGreen);
+}
+
+.cards section.card.item button:hover {
+    background: var(--color-darkGreen);
+    transition: .3s ease-in;
+}
+
+.cards section.card span {
+    text-decoration: line-through;
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 85%;
+    margin-bottom: 16px;
+}
+
+.cards section.card p {
+    font-weight: 600;
+    max-width: 240px;
+    margin-top: 8px;
+    font-size: 20px;
+    color: var(--color-darkGreen);
+}
+
+.cards section.card.item {
+    box-shadow: 5px 15px 15px var(--color-gray3);
+}
+
+/* Lista de Produtos */
+
+.Store {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+#title-menu {
+    color: var(--color-darkGray);
+    font-size: 32px;
+    padding: 25px;
+}
+
+#title-menu::after {
+    width: 75%;
+    content: "";
+    display: block;
+    border-bottom: 3px solid var(--color-darkGreen);
+    border-radius: 10px;
+    margin-top: 5px;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.Store button {
+    cursor: pointer;
+    background-color: var(--color-lightGreen);
+    color: var(--color-white);
+    border: 1px solid var(--color-lightGreen);
+    border-radius:  10px;
+    padding: 15px;
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+}
+
+.Store button:hover {
+    background-color: var(--color-darkGreen);
+    transition: .3s ease-in-out;
+}
+
+#prev-btn, #next-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+/* Footer */
+
+footer {
+    background:var(--color-white);
+    display: flex;
+    width: 100%;
+    min-height: 250px;
+}
+
+footer .boxs {
+    width: 320px;
+    min-height: 150px;
+    padding: 20px;
+    position: relative;
+    top: 50px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .boxs h2 {
+    color: var(--color-darkGreen);
+}
+
+.boxs ul li {
+    margin-bottom: 10px 0px;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.boxs ul li a {
+    color: var(--color-gray);
+    text-decoration: none;
+}
+
+.boxs ul li a:hover {
+    color: var(--color-lightGreen);
+}
+
+.boxs ul li .fa-brands {
+    justify-content: center;
+    align-items: right;
+}
+
+.logo-footer {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.logo-footer img {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.logo-footer img:hover {
+    cursor: pointer;
+    animation: shakingLogo 1s ease-in-out;
+}
+
+@keyframes shakingLogo {
+    10% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-10deg);
+    }
+
+    30% {
+        transform: rotate(10deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    70% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    90% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Menu Responsivo */
+
+/* Site Responsivo */
