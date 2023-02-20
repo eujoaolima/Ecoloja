@@ -94,20 +94,44 @@ nav a {
     transition: .3s;
 }
 
-    /* Efeito Navbar */ 
+.login-btn button {
+    display: flex;
+    position: relative;
+    top: .5rem;
+    background-color: var(--color-lightGreen);
+    color: var(--color-white);
+    align-items: center;
+    justify-content:space-around;
+    padding: 15px;
+    border: 1px solid var(--color-lightGreen);
+    border-radius: 50px;
+    font-size: 18px;
+}
 
-    nav a::after {
-        content: "";
-        display: block;
-        border-bottom: 2px solid var(--color-darkGreen);
-        margin-top: 5px;
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-    }
+.login-btn button:hover {
+    background-color: var(--color-darkGreen);
+    transition: .3s ease;
+}
 
-    nav a:hover::after {
-        transform: scaleX(1);
-    }
+.login-btn a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+/* Efeito Navbar */ 
+
+nav a::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--color-darkGreen);
+    margin-top: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
 
 /* Banner */
 
@@ -119,7 +143,7 @@ nav a {
 /* Descontos da Semana - Título */
 
 #title {
-    color: var(--color-darkGray);
+    color: var(--color-darkGray2);
     font-size: 32px;
     padding: 25px;
 }
@@ -387,7 +411,3 @@ footer .boxs h2 {
         transform: rotate(0deg);
     }
 }
-
-/* Menu Responsivo */
-
-/* Site Responsivo */
