@@ -60,6 +60,7 @@ body {
 }
 
 .logo img:hover {
+    cursor: pointer;
     transform: scale(1.2);
     transition: transform .3s ease;
 }
@@ -95,6 +96,7 @@ nav a {
 }
 
 .login-btn button {
+    cursor: pointer;
     display: flex;
     position: relative;
     top: .5rem;
@@ -109,8 +111,8 @@ nav a {
 }
 
 .login-btn button:hover {
-    background-color: var(--color-darkGreen);
-    transition: .3s ease;
+    background-image: linear-gradient(to right, var(--color-lightGreen), var(--color-darkGreen));
+    transition: .5s ease;
 }
 
 .login-btn a {
